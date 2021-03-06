@@ -1,0 +1,863 @@
+
+###########################################
+#         Auto Generated                  #
+###########################################
+<config sw> Protocol = 29
+<config sw> PIN_KRX_CANH = 6
+<config sw> TYPE_KRX_CANH = 0
+<config sw> VOLT_KRX_CANH = 3
+<config sw> PIN_KTX_CANH = 14
+<config sw> TYPE_KTX_CANH = 0
+<config sw> VOLT_KTX_CANH = 3
+<config sw> PIN_LRX_CANH =  6
+<config sw> TYPE_LTX_CANH = 0
+<config sw> VOLT_LTX_CANH = 3
+<config sw> VREF = 0
+<config sw> BAUDRATE = 500000
+<config sw> DATABIT = 0
+<config sw> PARITY = 0
+<config sw> TBYTE = 8
+<config sw> TFRAME = 10
+<config sw> F CAN NUMBER FRAME = 1
+<config sw> RANGE =   700,7ff;
+###########################################
+#         End of config                   #
+###########################################
+
+//Init CAN and CAN UDS
+INFO_DATABASE = Req>1			00 00 07 xx 08 03 22 02 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08 04 62 02 00 0F 00 00 00 	NONE	0	0
+
+INFO_DATABASE = Req>1			00 00 07 xx 08 03 22 D1 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08 04 62 D1 00 00 00 00 00 	NONE	0	0
+
+INFO_DATABASE = Req>1			00 00 07 xx  08 03 14 FF 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08 01 54 xx xx xx xx xx xx 	NONE	0	0
+
+INFO_DATABASE = Req>1			00 00 07 xx 08 03 22 02 02 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08 04 62 02 02 00 00 00 00 	NONE	0	0
+
+INFO_DATABASE = Req>1			00 00 07 xx  08 04 14 FF FF FF 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08 01 54 00 00 00 00 00 	NONE	0	0
+
+//MODE 1
+INFO_DATABASE = Req>1			000007DF 08 02 01 00 xx xx xx xx xx 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 06 41 00 BE 3F A8 13 00 	NONE	0	0
+
+INFO_DATABASE = Req>1			000007DF 08 02 01 01 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 06 41 01 00 07 65 00 00 	NONE	0	0
+
+INFO_DATABASE = Req>1			000007DF 08 01 04 01 00 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 03 7F 04 22 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: PCM - Powertrain Control Module
+//NOTE:profile: Ford_PCM_CAN UDS_129
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P2C6D,P1465,P220E,P1043,P283F,P2457,P0A50,P2B51
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P2C6D-04 (N/A)
+//NOTE:  - Drive Motor "A" Phase Y Current Low - System Internal Failures
+//NOTE:
+//NOTE:===P1465-55 (N/A)
+//NOTE:  - (A/C) Relay Circuit - Not Configured
+//NOTE:
+//NOTE:===P220E-8B (Indeterminate/MIL)
+//NOTE:  - (NOX) Sensor Heater Control Circuit Range/Performance (Bank 1 Sensor 1) - N/A
+//NOTE:
+//NOTE:===P1043-4F (Indeterminate/MIL)
+//NOTE:  - Intake Air Pressure Sensor Circuit High - N/A
+//NOTE:
+//NOTE:===P283F-0E (Current/MIL)
+//NOTE:  - Shift Fork C Position Circuit Intermittent - N/A
+//NOTE:
+//NOTE:===P2457-10 (N/A)
+//NOTE:  - (EGR) Cooler System Performance - N/A
+//NOTE:
+//NOTE:===P0A50-7B (N/A)
+//NOTE:  - Generator Position Sensor Circuit Overspeed - Low Fluid Level
+//NOTE:
+//NOTE:===P2B51-B5 (N/A)
+//NOTE:  - "B" Camshaft Profile Actuator "B" Control Performance/Stuck Off Bank 1 - N/A
+INFO_DATABASE = Req>1			000007E0 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 10 23 59 02 FF 2C 6D 04 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 21 EB 14 65 55 4B 22 0E 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 22 8B DC 10 43 4F CC 28 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 23 3F 0E BD 24 57 10 EF 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 24 0A 50 7B F9 2B 51 B5 	NONE	0	0
+INFO_DATABASE = Res<1			000007E8 08 25 75 00 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: ABS - Anti-Lock Brake / Traction Control Module
+//NOTE:profile: Ford_ABS_CAN UDS_135
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P0B8C,P2481,P2678,U0326,P2A44,P173F,P0B40,P1665
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P0B8C-83 (N/A)
+//NOTE:  - Hybrid Battery Voltage Sense Q Circuit Range/Performance - Value Of Signal Protection Calculation Incorrect
+//NOTE:
+//NOTE:===P2481-75 (Indeterminate/MIL)
+//NOTE:  - Exhaust Gas Temperature Sensor Circuit Range/Performance Bank 1 Sensor 5 - Emergency Position Not Reachable
+//NOTE:
+//NOTE:===P2678-07 (Current)
+//NOTE:  - Coolant Degassing Valve Control Circuit / Open - Mechanical Failures
+//NOTE:
+//NOTE:===U0326-13 (N/A)
+//NOTE:  - Software Incompatibility with (VIM) - Circuit Open
+//NOTE:
+//NOTE:===P2A44-DA (Current/MIL)
+//NOTE:  - Alternative Fuel Tank B Pressure Sensor Circuit High - N/A
+//NOTE:
+//NOTE:===P173F-48 (Current/MIL)
+//NOTE:  - Ignition Key Lock Solenoid Circuit High - Supervision Software Failure
+//NOTE:
+//NOTE:===P0B40-64 (Current/MIL)
+//NOTE:  - Hybrid Battery Voltage Sense B Circuit - Signal Plausibility Failure
+//NOTE:
+//NOTE:===P1665-49 (Not Current/MIL)
+//NOTE:  - Injection Pump Control Module Communications - Internal Electronic Failure
+INFO_DATABASE = Req>1			00000760 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000768 08 10 23 59 02 FF 0B 8C 83 	NONE	0	0
+INFO_DATABASE = Res<1			00000768 08 21 E3 24 81 75 D8 26 78 	NONE	0	0
+INFO_DATABASE = Res<1			00000768 08 22 07 3A c3 26 13 10 2A 	NONE	0	0
+INFO_DATABASE = Res<1			00000768 08 23 44 DA 87 17 3F 48 96 	NONE	0	0
+INFO_DATABASE = Res<1			00000768 08 24 0B 40 64 83 16 65 49 	NONE	0	0
+INFO_DATABASE = Res<1			00000768 08 25 A8 00 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: RCM - Restraint Control Module
+//NOTE:profile: Ford_RCM_CAN UDS_133
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: B1482,P068E,P27C6,C1A02,U0592,P2A58,P019C
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===B1482-8F (N/A)
+//NOTE:  - Front Door Cinching Latch 2 - Erratic
+//NOTE:
+//NOTE:===P068E-15 (Current)
+//NOTE:  - Cylinder 8 Glow Plug Circuit Low - Circuit Short To Battery Or Open
+//NOTE:
+//NOTE:===P27C6-29 (N/A)
+//NOTE:  - Pressure Control Solenoid P Control Circuit Range/Performance - Signal Invalid
+//NOTE:
+//NOTE:===C1A02-53 (Not Current)
+//NOTE:  - Rotary Encoder Stuck In Intermediate Position - Deactivated
+//NOTE:
+//NOTE:===U0592-72 (N/A)
+//NOTE:  - Invalid Data Received From Gear Shift Module B - Actuator Stuck Open
+//NOTE:
+//NOTE:===P2A58-E6 (Current/MIL)
+//NOTE:  - Alternative Fuel Vaporizer B Outlet Temperature Sensor Circuit High - N/A
+//NOTE:
+//NOTE:===P019C-A1 (N/A)
+//NOTE:  - (O2) Sensor Delayed Response - Rich to Lean Bank 2 Sensor 3 - System Voltage
+INFO_DATABASE = Req>1			00000737 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000073F 08 10 1f 59 02 FF 94 82 8F 	NONE	0	0
+INFO_DATABASE = Res<1			0000073F 08 21 F6 06 8E 15 1F 27 C6 	NONE	0	0
+INFO_DATABASE = Res<1			0000073F 08 22 29 E3 5A 02 53 0C c5 	NONE	0	0
+INFO_DATABASE = Res<1			0000073F 08 23 92 72 DE 2A 58 E6 85 	NONE	0	0
+INFO_DATABASE = Res<1			0000073F 08 24 01 9C A1 E2 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: ACM - Audio Control Module
+//NOTE:profile: Ford_ACM_CAN UDS_168
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P2A52,P0ABE,P0E66,P05C6
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P2A52-F7 (N/A)
+//NOTE:  - Alternative Fuel Vaporizer A Outlet Temperature Sensor Circuit Low - N/A
+//NOTE:
+//NOTE:===P0ABE-4F (N/A)
+//NOTE:  - Hybrid Battery Pack Voltage Sense Circuit Intermittent / Erratic - N/A
+//NOTE:
+//NOTE:===P0E66-82 (N/A)
+//NOTE:  - Battery Charger Control Circuit Low - Alive/Sequence Counter Incorrect/Not Updated
+//NOTE:
+//NOTE:===P05C6-8A (Current/MIL)
+//NOTE:  - Engine Coolant Pressure Sensor Circuit Intermittent/Erratic - N/A
+INFO_DATABASE = Req>1			00000727 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000072F 08 10 13 59 02 FF 2A 52 F7 	NONE	0	0
+INFO_DATABASE = Res<1			0000072F 08 21 E2 0A BE 4F 6D 0E 66 	NONE	0	0
+INFO_DATABASE = Res<1			0000072F 08 22 82 47 05 C6 8A AE 00 	NONE	0	0
+
+
+
+
+//NOTE:system: APIM - Accessory Protocol Interface Module
+//NOTE:profile: Ford_APIM_CAN UDS_121
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P09A2,P02B7,B1302,P0554,B12FC,B1A15,P27A1
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P09A2-2C (N/A)
+//NOTE:  - Gate Select Position Circuit "B" - N/A
+//NOTE:
+//NOTE:===P02B7-DB (Current/MIL)
+//NOTE:  - Cylinder 8 Balance - Fuel Trim at Min Limit - N/A
+//NOTE:
+//NOTE:===B1302-CC (Current)
+//NOTE:  - Mirror Motor Common - N/A
+//NOTE:
+//NOTE:===P0554-14 (N/A)
+//NOTE:  - Power Steering Pressure Sensor/Switch Circuit Intermittent - Circuit Short To Ground Or Open
+//NOTE:
+//NOTE:===B12FC-8D (N/A)
+//NOTE:  - Front Door Lock Feedback - N/A
+//NOTE:
+//NOTE:===B1A15-06 (Current/MIL)
+//NOTE:  - (PAD) Warning Lamp Circuit - Algorithm Based Failures
+//NOTE:
+//NOTE:===P27A1-18 (N/A)
+//NOTE:  - Electric/Auxiliary Transmission Fluid Pump Stuck On - Circuit Current Below Threshold
+INFO_DATABASE = Req>1			000007D0 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007D8 08 10 1f 59 02 FF 09 A2 2C 	NONE	0	0
+INFO_DATABASE = Res<1			000007D8 08 21 CF 02 B7 DB A5 93 02 	NONE	0	0
+INFO_DATABASE = Res<1			000007D8 08 22 CC 23 05 54 14 E7 92 	NONE	0	0
+INFO_DATABASE = Res<1			000007D8 08 23 FC 8D 14 9A 15 06 A6 	NONE	0	0
+INFO_DATABASE = Res<1			000007D8 08 24 27 A1 18 7B 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: BdyCM - Body Control Module
+//NOTE:profile: Ford_BdyCM_CAN UDS_171
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: B1546,U041B,P03C1,P00A1,P2BC2,B1006,P00E9,P0AFD
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===B1546-D9 (Indeterminate)
+//NOTE:  - Left Entry Switch - N/A
+//NOTE:
+//NOTE:===U041B-6D (N/A)
+//NOTE:  - Invalid Data Received from Exhaust Gas Sensor Module - N/A
+//NOTE:
+//NOTE:===P03C1-74 (N/A)
+//NOTE:  - Cylinder 5 Pressure Sensor Circuit Intermittent/Erratic - Actuator Slipping
+//NOTE:
+//NOTE:===P00A1-37 (Current)
+//NOTE:  - Charge Air Cooler Temperature Sensor Circuit Range/Performance Bank 2 - Signal Frequency Too High
+//NOTE:
+//NOTE:===P2BC2-20 (Current)
+//NOTE:  - Charge Air Cooler Coolant Pump Supply Voltage Circuit - N/A
+//NOTE:
+//NOTE:===B1006-EB (N/A)
+//NOTE:  - Center Front Impact Classification Sensor - N/A
+//NOTE:
+//NOTE:===P00E9-72 (N/A)
+//NOTE:  - (IAT) Sensor 3 Circuit Range/Performance Bank 1 - Actuator Stuck Open
+//NOTE:
+//NOTE:===P0AFD-FF (Not Current)
+//NOTE:  - Hybrid Battery Pack Temperature Too Low - N/A
+INFO_DATABASE = Req>1			00000726 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000072E 08 10 23 59 02 FF 95 46 D9 	NONE	0	0
+INFO_DATABASE = Res<1			0000072E 08 21 4C c4 1B 6D 7B 03 C1 	NONE	0	0
+INFO_DATABASE = Res<1			0000072E 08 22 74 6E 00 A1 37 3B 2B 	NONE	0	0
+INFO_DATABASE = Res<1			0000072E 08 23 C2 20 0D 90 06 EB 10 	NONE	0	0
+INFO_DATABASE = Res<1			0000072E 08 24 00 E9 72 43 0A FD FF 	NONE	0	0
+INFO_DATABASE = Res<1			0000072E 08 25 1C 00 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: BECMB - Battery Energy Control Module B
+//NOTE:profile: Ford_BECMB_CAN UDS_289
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P2283,P0C32,B113C,C1A85
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P2283-61 (N/A)
+//NOTE:  - Injector Control Pressure Sensor Circuit - Signal Calculation Failure
+//NOTE:
+//NOTE:===P0C32-90 (Current)
+//NOTE:  - Hybrid Battery Cooling System Performance - N/A
+//NOTE:
+//NOTE:===B113C-3B (N/A)
+//NOTE:  - Hazard switch illumination - N/A
+//NOTE:
+//NOTE:===C1A85-47 (N/A)
+//NOTE:  - Right Rear Outlet Valve - Watchdog/Safety µC Failure
+INFO_DATABASE = Req>1			00000723 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000072B 08 10 13 59 02 FF 22 83 61 	NONE	0	0
+INFO_DATABASE = Res<1			0000072B 08 21 64 0C 32 90 1F 91 3C 	NONE	0	0
+INFO_DATABASE = Res<1			0000072B 08 22 3B EE 5A 85 47 5F 00 	NONE	0	0
+
+
+
+
+//NOTE:system: C-CM - Cruise-Control Module
+//NOTE:profile: Ford_C-CM_CAN UDS_144
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: U0295,P0516,P0820,P26D9
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===U0295-84 (Indeterminate)
+//NOTE:  - Lost Communication With AC/AC Converter Control Module - Signal Below Allowable Range
+//NOTE:
+//NOTE:===P0516-D7 (N/A)
+//NOTE:  - Battery Temperature Sensor Circuit Low - N/A
+//NOTE:
+//NOTE:===P0820-A5 (Failsafe/MIL)
+//NOTE:  - Gear Lever X-Y Position Sensor Circuit - N/A
+//NOTE:
+//NOTE:===P26D9-A0 (N/A)
+//NOTE:  - Engine Coolant Pump Clutch Control Circuit Low - N/A
+INFO_DATABASE = Req>1			00000764 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000076C 08 10 13 59 02 FF c2 95 84 	NONE	0	0
+INFO_DATABASE = Res<1			0000076C 08 21 78 05 16 D7 52 08 20 	NONE	0	0
+INFO_DATABASE = Res<1			0000076C 08 22 A5 84 26 D9 A0 F5 00 	NONE	0	0
+
+
+
+
+//NOTE:system: DACMC - Digital Audio Control Module C
+//NOTE:profile: Ford_DACMC_CAN UDS_195
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P1006,P0B39,C0575
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P1006-14 (N/A)
+//NOTE:  - Fuel Shutoff Valve D Control Circuit Low - Circuit Short To Ground Or Open
+//NOTE:
+//NOTE:===P0B39-A5 (Current)
+//NOTE:  - Motor Electronics Coolant Pump B Control Circuit Low - N/A
+//NOTE:
+//NOTE:===C0575-09 (N/A)
+//NOTE:  - Brake Pressure Sensor D Circuit Low - Component Failures
+INFO_DATABASE = Req>1			000007D5 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007DD 08 10 0f 59 02 FF 10 06 14 	NONE	0	0
+INFO_DATABASE = Res<1			000007DD 08 21 E3 0B 39 A5 3F 45 75 	NONE	0	0
+INFO_DATABASE = Res<1			000007DD 08 22 09 5A 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: DCDC - DC to DC Converter Control Module
+//NOTE:profile: Ford_DCDC_CAN UDS_156
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: B1C60,P2517,B10FA,P0A18,P26B9
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===B1C60-FD (N/A)
+//NOTE:  - Sidelights Relay Output Circuit - N/A
+//NOTE:
+//NOTE:===P2517-A6 (Failsafe/MIL)
+//NOTE:  - (A/C) Refrigerant Pressure Sensor B Circuit Low Input - N/A
+//NOTE:
+//NOTE:===B10FA-6A (N/A)
+//NOTE:  - Delayed Power Off relay - N/A
+//NOTE:
+//NOTE:===P0A18-20 (Current)
+//NOTE:  - Motor Torque Sensor Circuit Range/Performance - N/A
+//NOTE:
+//NOTE:===P26B9-08 (Failsafe/MIL)
+//NOTE:  - Engine Coolant Bypass Valve C Control Circuit High - Bus Signal/Message Failures
+INFO_DATABASE = Req>1			00000746 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000074E 08 10 17 59 02 FF 9C 60 FD 	NONE	0	0
+INFO_DATABASE = Res<1			0000074E 08 21 E6 25 17 A6 C4 90 FA 	NONE	0	0
+INFO_DATABASE = Res<1			0000074E 08 22 6A 41 0A 18 20 15 26 	NONE	0	0
+INFO_DATABASE = Res<1			0000074E 08 23 B9 08 80 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: DSP - (Audio) Digital Signal Processing Module
+//NOTE:profile: Ford_DSP_CAN UDS_166
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: U0613,P001D,P0904,P22D7,P0991,P0619
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===U0613-F7 (Failsafe/MIL)
+//NOTE:  - Lost Communication With Intake Air Temperature Sensor 2 - Bank 1 - N/A
+//NOTE:
+//NOTE:===P001D-64 (Current/MIL)
+//NOTE:  - Intake A Cam Profile Control Circuit Open - Bank 2 - Signal Plausibility Failure
+//NOTE:
+//NOTE:===P0904-07 (Current)
+//NOTE:  - Gate Select Position Circuit [senses left / right position] - Mechanical Failures
+//NOTE:
+//NOTE:===P22D7-75 (N/A)
+//NOTE:  - Turbocharger Turbine Inlet Valve Position Sensor Circuit High - Emergency Position Not Reachable
+//NOTE:
+//NOTE:===P0991-DD (N/A)
+//NOTE:  - Transmission Fluid Pressure Sensor/Switch E Circuit Intermittent - N/A
+//NOTE:
+//NOTE:===P0619-89 (Indeterminate/MIL)
+//NOTE:  - (AFCM) (RAM)/(ROM) Error - N/A
+INFO_DATABASE = Req>1			00000783 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000078B 08 10 1b 59 02 FF c6 13 F7 	NONE	0	0
+INFO_DATABASE = Res<1			0000078B 08 21 D0 00 1D 64 AE 09 04 	NONE	0	0
+INFO_DATABASE = Res<1			0000078B 08 22 07 36 22 D7 75 34 09 	NONE	0	0
+INFO_DATABASE = Res<1			0000078B 08 23 91 DD F9 06 19 89 E8 	NONE	0	0
+
+
+
+
+//NOTE:system: GSM - Gear Shift Module
+//NOTE:profile: Ford_GSM_CAN UDS_201
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: C1000,P0133,P1246,P0A62
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===C1000-BB (N/A)
+//NOTE:  - (HDC) Function - N/A
+//NOTE:
+//NOTE:===P0133-C5 (Current)
+//NOTE:  - (O2) Circuit Slow Response (Bank 1, Sensor 1) - N/A
+//NOTE:
+//NOTE:===P1246-DB (N/A)
+//NOTE:  - Alternator Load Input - N/A
+//NOTE:
+//NOTE:===P0A62-61 (N/A)
+//NOTE:  - Drive Motor A Phase V Current High - Signal Calculation Failure
+INFO_DATABASE = Req>1			00000732 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000073A 08 10 13 59 02 FF 50 00 BB 	NONE	0	0
+INFO_DATABASE = Res<1			0000073A 08 21 7D 01 33 C5 2D 12 46 	NONE	0	0
+INFO_DATABASE = Res<1			0000073A 08 22 DB D7 0A 62 61 65 00 	NONE	0	0
+
+
+
+
+//NOTE:system: GWM - Gateway Module A
+//NOTE:profile: Ford_GWM_CAN UDS_187
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: B11ED,P2C63,P1258,U0018,B12B1
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===B11ED-81 (N/A)
+//NOTE:  - Electric Heater Control Module - Invalid Serial Data Received
+//NOTE:
+//NOTE:===P2C63-9B (Current)
+//NOTE:  - O2 Sensor Pumping Current Trim Circuit Low Bank 1 Sensor 3 - High/Excessive Flow
+//NOTE:
+//NOTE:===P1258-6B (N/A)
+//NOTE:  - Pedal Correlation PDS1 and PDS2 - N/A
+//NOTE:
+//NOTE:===U0018-B1 (Current)
+//NOTE:  - Medium Speed (CAN) Communication Bus (-) shorted to Bus (+) - N/A
+//NOTE:
+//NOTE:===B12B1-C4 (Indeterminate)
+//NOTE:  - Heated Washer Jet and Wiper Park Relay - N/A
+INFO_DATABASE = Req>1			00000716 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000071E 08 10 17 59 02 FF 91 ED 81 	NONE	0	0
+INFO_DATABASE = Res<1			0000071E 08 21 DD 2C 63 9B 0D 12 58 	NONE	0	0
+INFO_DATABASE = Res<1			0000071E 08 22 6B FD c0 18 B1 27 92 	NONE	0	0
+INFO_DATABASE = Res<1			0000071E 08 23 B1 C4 6C 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: HCM - Headlamp Control Module
+//NOTE:profile: Ford_HCM_CAN UDS_145
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: B1173,U0177,P2B7E,P177C,U0319,U0051
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===B1173-6E (Current)
+//NOTE:  - Passenger Door Interior Handle - N/A
+//NOTE:
+//NOTE:===U0177-73 (Current/MIL)
+//NOTE:  - Lost Communication With Restraints System Sensor H - Actuator Stuck Closed
+//NOTE:
+//NOTE:===P2B7E-6F (N/A)
+//NOTE:  - EVAP System Pressure Sensor/Switch "C" Circuit Intermittent - N/A
+//NOTE:
+//NOTE:===P177C-7E (Current/MIL)
+//NOTE:  - Default Position Motor - Actuator Stuck On
+//NOTE:
+//NOTE:===U0319-10 (Current)
+//NOTE:  - Software Incompatibility with Steering Effort Control Module - N/A
+//NOTE:
+//NOTE:===U0051-CF (N/A)
+//NOTE:  - Vehicle Communication Bus C (-) Open - N/A
+INFO_DATABASE = Req>1			00000734 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000073C 08 10 1b 59 02 FF 91 73 6E 	NONE	0	0
+INFO_DATABASE = Res<1			0000073C 08 21 0F c1 77 73 93 2B 7E 	NONE	0	0
+INFO_DATABASE = Res<1			0000073C 08 22 6F D5 17 7C 7E BB c3 	NONE	0	0
+INFO_DATABASE = Res<1			0000073C 08 23 19 10 12 c0 51 CF 4E 	NONE	0	0
+
+
+
+
+//NOTE:system: HSWM - Heated Steering Wheel Module
+//NOTE:profile: Ford_HSWM_CAN_UDS_614
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: B12A2,B155A,B3A00
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===B12A2-05 (Current/MIL)
+//NOTE:  - Steering Column Adjust In Switch - System Programming Failures
+//NOTE:
+//NOTE:===B155A-2E (N/A)
+//NOTE:  - Right Headlamp - N/A
+//NOTE:
+//NOTE:===B3A00-44 (N/A)
+//NOTE:  - A/C Refrigerant Distribution Valve Actuator "C" Stuck/Open - Data Memory Failure
+INFO_DATABASE = Req>1			00000714 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000071C 08 10 0f 59 02 FF 92 A2 05 	NONE	0	0
+INFO_DATABASE = Res<1			0000071C 08 21 A1 95 5A 2E 64 bA 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000071C 08 22 44 EE 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: HUD - Head Up Display
+//NOTE:profile: Ford_HUD_CAN UDS_152
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P0942,P1A1D,P0B06,B13BC,P25B1,P024D,P2BDA
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P0942-5C (N/A)
+//NOTE:  - Hydraulic Pressure Unit - N/A
+//NOTE:
+//NOTE:===P1A1D-14 (Current/MIL)
+//NOTE:  - Hybrid Battery B Power Switching Relay Performance - Circuit Short To Ground Or Open
+//NOTE:
+//NOTE:===P0B06-F0 (Current/MIL)
+//NOTE:  - Auxilliary Transmission Fluid Pump Motor Phase W Current - N/A
+//NOTE:
+//NOTE:===B13BC-98 (N/A)
+//NOTE:  - Steering Wheel Heating Element - Component Or System Over Temperature
+//NOTE:
+//NOTE:===P25B1-1F (N/A)
+//NOTE:  - Fuel Level Sensor B Stuck - Circuit Intermittent
+//NOTE:
+//NOTE:===P024D-2F (Current)
+//NOTE:  - Charge Air Cooler Bypass Position Sensor A Circuit Range/Performance - Signal Erratic
+//NOTE:
+//NOTE:===P2BDA-EC (Failsafe/MIL)
+//NOTE:  - Motor Electronics Coolant Temperature Sensor "B" Circuit Low - N/A
+INFO_DATABASE = Req>1			000007B2 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			000007BA 08 10 1f 59 02 FF 09 42 5C 	NONE	0	0
+INFO_DATABASE = Res<1			000007BA 08 21 F2 1A 1D 14 A5 0B 06 	NONE	0	0
+INFO_DATABASE = Res<1			000007BA 08 22 F0 A7 93 BC 98 E1 25 	NONE	0	0
+INFO_DATABASE = Res<1			000007BA 08 23 B1 1F 41 02 4D 2F 17 	NONE	0	0
+INFO_DATABASE = Res<1			000007BA 08 24 2B DA EC 80 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: IPC - Instrument Panel Control Module
+//NOTE:profile: Ford_IPC_CAN UDS_132
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P268E,P1586,P07F3,B1340,U056A
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P268E-A8 (Failsafe/MIL)
+//NOTE:  - Cylinder 3 Injector Data Incompatible - N/A
+//NOTE:
+//NOTE:===P1586-DE (N/A)
+//NOTE:  - Electronic Throttle to (PCM) Communication Error - N/A
+//NOTE:
+//NOTE:===P07F3-18 (Current/MIL)
+//NOTE:  - (TR) Control Module Communication Circuit Low - Circuit Current Below Threshold
+//NOTE:
+//NOTE:===B1340-AE (N/A)
+//NOTE:  - Right Power Sliding Door Close Motor - N/A
+//NOTE:
+//NOTE:===U056A-24 (Current/MIL)
+//NOTE:  - Invalid Data Received From Image Processing Sensor E - Signal Stuck High
+INFO_DATABASE = Req>1			00000720 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000728 08 10 17 59 02 FF 26 8E A8 	NONE	0	0
+INFO_DATABASE = Res<1			00000728 08 21 A4 15 86 DE FF 07 F3 	NONE	0	0
+INFO_DATABASE = Res<1			00000728 08 22 18 B7 93 40 AE 7F c5 	NONE	0	0
+INFO_DATABASE = Res<1			00000728 08 23 6A 24 B3 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: IPMA - Image Processing Module A
+//NOTE:profile: Ford_IPMA_CAN UDS_191
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P27E9,C1B21,B1400,P2B1B,P0757,P1670,B12BF,B10D4
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P27E9-2A (N/A)
+//NOTE:  - Transmission Range Control B Circuit Low - Stuck in Range
+//NOTE:
+//NOTE:===C1B21-72 (Current)
+//NOTE:  - Compressor Brush Card Temperature Sensor Circuit - Actuator Stuck Open
+//NOTE:
+//NOTE:===B1400-F0 (N/A)
+//NOTE:  - Microphone 4 - N/A
+//NOTE:
+//NOTE:===P2B1B-75 (Current/MIL)
+//NOTE:  - Cylinder 6 Injection Pulse Offset Exceeded Learning Limit - Emergency Position Not Reachable
+//NOTE:
+//NOTE:===P0757-56 (N/A)
+//NOTE:  - (SSB) Stuck On - Invalid/Incompatible Configuration
+//NOTE:
+//NOTE:===P1670-A2 (Current/MIL)
+//NOTE:  - Electronic Feedback Signal Not Detected - System Voltage Low
+//NOTE:
+//NOTE:===B12BF-6C (Failsafe/MIL)
+//NOTE:  - Right Front Camera - N/A
+//NOTE:
+//NOTE:===B10D4-69 (N/A)
+//NOTE:  - Right rear Lock button - N/A
+INFO_DATABASE = Req>1			00000706 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000070E 08 10 23 59 02 FF 27 E9 2A 	NONE	0	0
+INFO_DATABASE = Res<1			0000070E 08 21 49 5B 21 72 33 94 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000070E 08 22 F0 F9 2B 1B 75 97 07 	NONE	0	0
+INFO_DATABASE = Res<1			0000070E 08 23 57 56 7B 16 70 A2 BD 	NONE	0	0
+INFO_DATABASE = Res<1			0000070E 08 24 92 BF 6C A0 90 D4 69 	NONE	0	0
+INFO_DATABASE = Res<1			0000070E 08 25 E3 00 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: OCS - Occupant Classification System Module
+//NOTE:profile: Ford_OCS_CAN UDS_137
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: B1B16,C1A01,P1619,B1251,P245A,B11F3
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===B1B16-61 (N/A)
+//NOTE:  - Transponder Key 14 - Signal Calculation Failure
+//NOTE:
+//NOTE:===C1A01-AB (Current)
+//NOTE:  - (LED) Circuit - N/A
+//NOTE:
+//NOTE:===P1619-9B (Current/MIL)
+//NOTE:  - Interactive Reprogramming Code - total checksum error - High/Excessive Flow
+//NOTE:
+//NOTE:===B1251-38 (Current/MIL)
+//NOTE:  - Tire Pressure Sensor Low Battery - Signal Frequency Incorrect
+//NOTE:
+//NOTE:===P245A-93 (N/A)
+//NOTE:  - (EGR) Cooler Bypass Control Circuit - No Operation
+//NOTE:
+//NOTE:===B11F3-FE (Indeterminate)
+//NOTE:  - Foot/Face Damper Actuator - N/A
+INFO_DATABASE = Req>1			00000765 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000076D 08 10 1b 59 02 FF 9B 16 61 	NONE	0	0
+INFO_DATABASE = Res<1			0000076D 08 21 6F 5A 01 AB 2A 16 19 	NONE	0	0
+INFO_DATABASE = Res<1			0000076D 08 22 9B 81 92 51 38 97 24 	NONE	0	0
+INFO_DATABASE = Res<1			0000076D 08 23 5A 93 72 91 F3 FE 6C 	NONE	0	0
+
+
+
+
+//NOTE:system: PAM - Parking Aid Module
+//NOTE:profile: Ford_PAM_CAN UDS_148
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P2BF8,P1793,U008A,P092A,P0377,P116C,P0381
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P2BF8-B2 (Failsafe/MIL)
+//NOTE:  - Exhaust Flow Control Valve "B" Control Circuit/Open - N/A
+//NOTE:
+//NOTE:===P1793-CA (N/A)
+//NOTE:  - Ignition Supply Malfunction >16, <7 volts - N/A
+//NOTE:
+//NOTE:===U008A-CA (N/A)
+//NOTE:  - Vehicle Communication Bus G Performance - N/A
+//NOTE:
+//NOTE:===P092A-20 (N/A)
+//NOTE:  - Gearshift Lock Solenoid/Actuator Circuit B Open - N/A
+//NOTE:
+//NOTE:===P0377-B8 (N/A)
+//NOTE:  - Timing Reference High Resolution Signal B Too Few Pulses - N/A
+//NOTE:
+//NOTE:===P116C-5C (Indeterminate)
+//NOTE:  - Fuel Stepper Motor Control 2 Circuit Open - N/A
+//NOTE:
+//NOTE:===P0381-E4 (Current/MIL)
+//NOTE:  - Glow Plug/Heater Indicator Circuit - N/A
+INFO_DATABASE = Req>1			00000736 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000073E 08 10 1f 59 02 FF 2B F8 B2 	NONE	0	0
+INFO_DATABASE = Res<1			0000073E 08 21 E0 17 93 CA CB c0 8A 	NONE	0	0
+INFO_DATABASE = Res<1			0000073E 08 22 CA EF 09 2A 20 20 03 	NONE	0	0
+INFO_DATABASE = Res<1			0000073E 08 23 77 B8 E9 11 6C 5C 78 	NONE	0	0
+INFO_DATABASE = Res<1			0000073E 08 24 03 81 E4 B6 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: PSCM - Power Steering Control Module
+//NOTE:profile: Ford_PSCM_CAN UDS_151
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: U0660,P1A19,B143E
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===U0660-CA (N/A)
+//NOTE:  - Lost Communication with Left Rear Temperature Actuator "B" - N/A
+//NOTE:
+//NOTE:===P1A19-7A (Current/MIL)
+//NOTE:  - Variable Voltage Controller Driver Temperature Sensor Circuit - Fluid Leak Or Seal Failure
+//NOTE:
+//NOTE:===B143E-8D (Indeterminate/MIL)
+//NOTE:  - Headlamp Switch Input - N/A
+INFO_DATABASE = Req>1			00000730 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000738 08 10 0f 59 02 FF c6 60 CA 	NONE	0	0
+INFO_DATABASE = Res<1			00000738 08 21 E2 1A 19 7A BF 94 3E 	NONE	0	0
+INFO_DATABASE = Res<1			00000738 08 22 8D EC 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: SCCM - Steering Column Control Module
+//NOTE:profile: Ford_SCCM_CAN UDS_173
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P2A33,P052C,P0457
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P2A33-3B (N/A)
+//NOTE:  - (AFCM) Power Relay Control Circuit Low - N/A
+//NOTE:
+//NOTE:===P052C-3A (N/A)
+//NOTE:  - Cold Start Camshaft Position Timing Over-Advanced - Bank 2 - Incorrect Has Too Many Pulses
+//NOTE:
+//NOTE:===P0457-08 (Failsafe/MIL)
+//NOTE:  - (EVAP) System Leak Detected (fuel cap loose/off) - Bus Signal/Message Failures
+INFO_DATABASE = Req>1			00000724 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000072C 08 10 0f 59 02 FF 2A 33 3B 	NONE	0	0
+INFO_DATABASE = Res<1			0000072C 08 21 70 05 2C 3A 24 04 57 	NONE	0	0
+INFO_DATABASE = Res<1			0000072C 08 22 08 F4 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: TCU - Telematic Control Unit Module
+//NOTE:profile: Ford_TCU_CAN UDS_208
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P0147,P00FC,P2C01,P228C,P0ABC,U04BB,P2438
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P0147-FC (Current/MIL)
+//NOTE:  - (O2) Heater Circuit (Bank 1, Sensor 3) - N/A
+//NOTE:
+//NOTE:===P00FC-40 (N/A)
+//NOTE:  - Turbocharger Outlet Pressure Sensor A Intermittent/Erratic - N/A
+//NOTE:
+//NOTE:===P2C01-D0 (Not Current)
+//NOTE:  - Fuel Pressure Regulator "D" Performance - N/A
+//NOTE:
+//NOTE:===P228C-D7 (N/A)
+//NOTE:  - Fuel Pressure Regulator 1 Exceeded Control Limits - Pressure Too Low - N/A
+//NOTE:
+//NOTE:===P0ABC-DF (Current/MIL)
+//NOTE:  - Hybrid Battery Pack Voltage Sense Circuit Low - N/A
+//NOTE:
+//NOTE:===U04BB-44 (N/A)
+//NOTE:  - Invalid Data Received from Switch Input Module "B" - Data Memory Failure
+//NOTE:
+//NOTE:===P2438-A4 (N/A)
+//NOTE:  - (AIR) System Air Flow/Pressure Sensor Circuit High Input Bank 2 - N/A
+INFO_DATABASE = Req>1			00000754 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			0000075C 08 10 1f 59 02 FF 01 47 FC 	NONE	0	0
+INFO_DATABASE = Res<1			0000075C 08 21 BF 00 FC 40 FB 2C 01 	NONE	0	0
+INFO_DATABASE = Res<1			0000075C 08 22 D0 1C 22 8C D7 D1 0A 	NONE	0	0
+INFO_DATABASE = Res<1			0000075C 08 23 BC DF 9B c4 BB 44 E1 	NONE	0	0
+INFO_DATABASE = Res<1			0000075C 08 24 24 38 A4 C7 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: TRCM - Transmission Range Control Module
+//NOTE:profile: Ford_TRCM_CAN UDS_209
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P0D7E,P0B62,C110A,P0527,B11C9,B12AB,P2535,P2A40
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P0D7E-7E (N/A)
+//NOTE:  - (A/C) Compressor Motor Phase W Current Low - Actuator Stuck On
+//NOTE:
+//NOTE:===P0B62-3F (Not Current)
+//NOTE:  - Hybrid Battery Voltage Sense H Circuit Intermittent/Erratic - N/A
+//NOTE:
+//NOTE:===C110A-41 (Current)
+//NOTE:  - Front Vertical Acceleration Sensor - General Checksum Failure
+//NOTE:
+//NOTE:===P0527-1D (Failsafe/MIL)
+//NOTE:  - Fan Speed Sensor Circuit Range/Performance - Circuit Current Out Of Range
+//NOTE:
+//NOTE:===B11C9-E5 (N/A)
+//NOTE:  - Driver Display Status (LED) - N/A
+//NOTE:
+//NOTE:===B12AB-04 (Current/MIL)
+//NOTE:  - Front Window Position Sensor Power Supply - System Internal Failures
+//NOTE:
+//NOTE:===P2535-51 (Current)
+//NOTE:  - Ignition Switch Run/Start Position Circuit High - Not Programmed
+//NOTE:
+//NOTE:===P2A40-A2 (N/A)
+//NOTE:  - Alternative Fuel System - Injector Leakage to Rail Detected - System Voltage Low
+INFO_DATABASE = Req>1			00000711 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000719 08 10 23 59 02 FF 0D 7E 7E 	NONE	0	0
+INFO_DATABASE = Res<1			00000719 08 21 7A 0B 62 3F 2C 51 0A 	NONE	0	0
+INFO_DATABASE = Res<1			00000719 08 22 41 3A 05 27 1D A4 91 	NONE	0	0
+INFO_DATABASE = Res<1			00000719 08 23 C9 E5 6D 92 AB 04 8F 	NONE	0	0
+INFO_DATABASE = Res<1			00000719 08 24 25 35 51 2D 2A 40 A2 	NONE	0	0
+INFO_DATABASE = Res<1			00000719 08 25 56 00 00 00 00 00 00 	NONE	0	0
+
+
+
+
+//NOTE:system: VDM - Vehicle Dynamics Module
+//NOTE:profile: Ford_VDM_CAN UDS_194
+//NOTE:protocol: PROTOCOL_CAN_UDS (PIN6-PIN14-500000)
+//NOTE:dtc list: P0AB6,P01E0,P1779,P2258,B102B,P23F7
+//NOTE:
+//NOTE:DTC Definitions:
+//NOTE:
+//NOTE:===P0AB6-21 (Current)
+//NOTE:  - Engine Mount Control B Circuit / Open - Signal Amplitude Less Than Minimum
+//NOTE:
+//NOTE:===P01E0-91 (Current)
+//NOTE:  - Cylinder 11 Injection Timing Perfomance - Over Advanced - Parametric
+//NOTE:
+//NOTE:===P1779-3E (Current)
+//NOTE:  - Transmission Control Indicator Light Circuit - N/A
+//NOTE:
+//NOTE:===P2258-4F (N/A)
+//NOTE:  - (AIR) System Control A Circuit High - N/A
+//NOTE:
+//NOTE:===B102B-D7 (Current/MIL)
+//NOTE:  - Passive Key - N/A
+//NOTE:
+//NOTE:===P23F7-52 (N/A)
+//NOTE:  - Cylinder 6 Injector B Air-Fuel Ratio Imbalance - Not Activated
+INFO_DATABASE = Req>1			00000721 08 03 19 02 8F 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00000729 08 10 1b 59 02 FF 0A B6 21 	NONE	0	0
+INFO_DATABASE = Res<1			00000729 08 21 39 01 E0 91 3E 17 79 	NONE	0	0
+INFO_DATABASE = Res<1			00000729 08 22 3E 22 22 58 4F 40 90 	NONE	0	0
+INFO_DATABASE = Res<1			00000729 08 23 2B D7 99 23 F7 52 75 	NONE	0	0
+
+
+
+

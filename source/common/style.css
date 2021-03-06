@@ -1,0 +1,55 @@
+
+table,th,td{
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    vertical-align: top;
+}     
+
+th, td{
+    padding-right:20;
+    padding-right:20;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+}
+
+a {
+    text-decoration:none;
+}
+.button_base {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.button_lang {background-color: #008CBA;} /* Blue */
+.button_control {background-color: #555555;} /* Black*/ 
+.button_util {background-color: #008CBA;} /* Blue */ 
+.button_input_submit {background-color: #4CAF50; color: white; padding: 5px 15px;} /* Gray */ 
+.button_download {background-color: #555555;} /* Black */
+
+.inputtext{
+    width:70%;
+    padding: 5px 15px;
+}
+
+
+
+body {
+    margin: 20px 50px;
+}
+
+form { display: inline; }
+
+.fixtop {
+ position: fixed; /* Set the navbar to fixed position */
+}

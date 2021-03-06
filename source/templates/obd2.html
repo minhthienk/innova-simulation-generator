@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block content %}
+    <a href="/..">
+        <button class="button_base button_control">Back</button>
+    </a>
+
+    <br>
+    <br>
+    <p style="color:Red;">{result}</p>
+
+    <form action="" method="post">
+        <b style="font-size:20px;">File Name:</b><br>
+        <input type="text" class="inputtext" placeholder="Input filename" name="filename" value="">
+        <br><br><br>
+
+        <b style="font-size:20px;">Protocol Selection</b><br><br>
+        <input type="radio" style="margin-left: 30px;" name="protocol" value="CAN" checked> Protocol CAN    
+        <input type="radio" style="margin-left: 30px;" name="protocol" value="PWM"> Protocol PWM
+        <input type="radio" style="margin-left: 30px;" name="protocol" value="ISO9141"> Protocol ISO9141
+        <input type="radio" style="margin-left: 30px;" name="protocol" value="KW2000"> Protocol KW2000
+        <br><br><br>
+
+        <b style="font-size:20px;">Mode $09</b><br>
+        <input type="text" class="inputtext" placeholder="Input VIN (Default: FFFFFFFFFFFFFFFF)" name="vin" value=""><br><br><br>
+
+        <b style="font-size:20px;">Mode $03</b><br>
+        <input type="text" class="inputtext" placeholder="Input mode $03 DTCs (Example: P0001, P1001, P2001, P3001)" name="dtcs_mode03" value="">
+        <br><br><br>
+
+        <b style="font-size:20px;">Mode $07</b><br>
+        <input type="text" class="inputtext" placeholder="Input mode $0A DTCs (Example: P0001, P1001, P2001, P3001)" name="dtcs_mode07" value="">
+        <br><br><br>
+
+        <b style="font-size:20px;">Mode $0A</b><br>
+        <input type="text" class="inputtext" placeholder="Input mode $0A DTCs (Example: P0001, P1001, P2001, P3001)" name="dtcs_mode0A" value="">
+        <br><br><br>
+        
+        <!-- Mode 1 -->
+        <b style="font-size:20px;">Mode $01 - Monitors</b>
+        <br><br>
+
+        <!-- Radio box to select Gasoline or Diesel -->
+        Engine type selection: 
+        <input type="radio" style="margin-left: 30px;" name="Comp" value="not support" onClick="showGas()" checked> Gasoline
+        <input type="radio" style="margin-left: 30px;" name="Comp" value="support" onClick="showDiesel()"> Diesel
+        <br><br>
+
+        {% macro render_monitor(monitor, description) -%}
+        {% if monitor == 'MIL' %}
+            <input type="checkbox" style="margin-left: 30px;" name={{ monitor }} value="on"> {{ description }}<br>
+            <input type="hidden" value="off" name={{ monitor }}>
+        {% else %}
+            <input type="checkbox" style="margin-left: 30px;" name="{{ monitor }}" id="{{ monitor }}" value="support" onClick="showWhenCheck('{{ monitor }}','{{ monitor }}-check-complete')"> {{ monitor }}: {{ description }}
+            <input type="hidden" value="not support" name="{{ monitor }}">
+            <div style="display:None" id="{{ monitor }}-check-complete">
+              <input type="radio" style="margin-left: 60px;" name="{{ monitor }}-complete" value="complete" checked> complete
+              <input type="radio" style="margin-left: 60px;" name="{{ monitor }}-complete" value="not complete"> not complete
+            </div><br>
+        {% endif %}
+        {%- endmacro %}
+
+
+        <!-- General monitors -->
+        <div id="general-monitors">
+            General monitors for both gasoline engine and diesel engine:<br>
+            {% for monitor, description in general_monitors.items() %}
+                {{ render_monitor(monitor, description) }}
+            {% endfor %}
+
+        </div><br>
+
+        <!-- Gasoline monitors -->
+        <div id="gasoline-monitors">
+            Monitors specified for gasoline engine only:<br>
+            {% for monitor, description in gasoline_monitors.items() %}
+                {{ render_monitor(monitor, description) }}
+            {% endfor %}
+        </div>
+
+        <!-- Diesel monitors -->
+        <div id="diesel-monitors" style="display:None">
+            Monitors specified for diesel engine only:<br>
+            {% for monitor, description in diesel_monitors.items() %}
+                {{ render_monitor(monitor, description) }}
+            {% endfor %}
+        </div><br>
+        
+        <br><br>
+        <b style="font-size:20px;">Mode $01 - Live Data</b><br><br>
+        Please input PIDs you want to generate values automatically:<br>
+        Example: 03-1F or 03-06,08-1F or 03,05,08,09 or 03,05,08,09,1A-1F<br>
+        <input type="text" class="inputtext" placeholder="Default: 03-4C" name="itemid_auto_setting" value=""><br><br><br>
+        You can input your disired values below:<br>
+
+
+        <div style="height:300px; width:70%; border:1px solid #ccc; overflow:auto;">
+            <p style="color:Blue; width:70%; padding: 5px 30px;">If any PID which is not provided a user-input value, an auto-generated value will be taken or the PID will not be supported depending on the setting of auto value generation</p>
+
+            {% for index, row in item_df.iterrows() %}
+                {% if row['GetValueCmd'] in ['x', 'Command'] %} <!-- ignore empty line -->
+
+                {% elif row['GetValueCmd'] in ['01 06', 
+                                               '01 07',
+                                               '01 08',
+                                               '01 09']
+                                                %}
+
+                {% else %}
+                    {% if row['TableID'] in ['N/A', ''] %} <!-- table type or value type. -->
+                        <br>
+                        <br>
+                        <div style="margin-left: 30px;">
+                            {{ row['GetValueCmd'] }} --- {{ row['ItemName'] }}  ({{ row['ItemDescription'] }})<br>
+                            Value must be from Min: {{ row['Min'] }} to Max: {{ row['Max'] }}<br>
+                            <input placeholder="(input value...)" class="inputtext" type="text" name="{{ row['ItemID'] }}">
+                        </div>
+                    {% else %}
+                        <br>
+                        <br>
+                        <div style="margin-left: 30px;">
+                            {{ row['GetValueCmd'] }} --- {{ row['ItemName'] }}  ({{ row['ItemDescription'] }})<br>
+                            <select class="inputtext" name="{{ row['ItemID'] }}">
+                                {% set options_df = table_df[table_df['TableID'] == row['TableID']] %} <!-- sub df containing data of a tableID -->
+                                    <option value="(select value...)">(select value...)</option>
+                                {% for index, option in options_df.iterrows() %}
+                                    <option value="{{  option['TABLE_TEXT'] }}">{{  option['TABLE_TEXT'] }}</option>
+                                {% endfor%}
+                            </select>
+                        </div>    
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <br><br><br>
+        </div>
+
+
+        <br><br><br>
+        <input type="submit" class="button_base button_input_submit"    name="submit_button" value="Submit">
+        <br><br><br>
+
+    </form>
+    <br><br><br><br><br><br><br><br>
+
+
+    <script language="Javascript">
+        function showGas(){
+                document.getElementById("gasoline-monitors").style.display="Block";
+                document.getElementById("diesel-monitors").style.display="None";
+        }
+
+        function showDiesel(){
+                document.getElementById("gasoline-monitors").style.display="None";
+                document.getElementById("diesel-monitors").style.display="Block";
+        }
+
+
+        function    showWhenCheck(checkBoxId,targetId){
+                if (document.getElementById(checkBoxId).checked==false) {
+                        document.getElementById(targetId).style.display="None";
+                }
+
+                if (document.getElementById(checkBoxId).checked==true) {
+                        document.getElementById(targetId).style.display="Block";
+                }
+        }
+    </script> 
+
+{% endblock %}
+

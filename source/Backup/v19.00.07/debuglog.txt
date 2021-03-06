@@ -1,0 +1,256 @@
+
+
+
+
+===================================================
+2019-09-06 11:06:41.275893
+
+class LiveData - formula missing: f(x)=a*x_offset_b
+
+
+
+===================================================
+2019-09-06 14:10:05.536889
+
+class LiveData - formula missing: f(x)=a*x_offset_b
+
+
+
+===================================================
+2019-09-06 14:13:27.489819
+
+class LiveData - formula missing: f(x)=x
+
+
+
+===================================================
+2019-09-06 14:15:07.136858
+
+class LiveData - formula missing: f(x)=x
+
+class LiveData - formula missing: f(x)=x
+
+
+
+===================================================
+2019-09-06 14:17:42.157371
+
+class LiveData - formula missing: f(x)=x
+
+class LiveData - formula missing: f(x)=x
+
+
+
+===================================================
+2019-09-06 14:17:57.112734
+
+class LiveData - formula missing: f(x)=x
+
+class LiveData - formula missing: f(x)=x
+
+
+
+===================================================
+2019-09-06 14:18:59.076246
+
+class LiveData - formula missing: f(x)=x
+
+class LiveData - formula missing: f(x)=x
+
+
+
+===================================================
+2019-09-06 14:21:01.863603
+
+class LiveData - formula missing: f(x)=x
+
+class LiveData - formula missing: f(x)=ax+b
+
+
+
+===================================================
+2019-09-06 14:23:43.568530
+
+class LiveData - formula missing: f(x)=x
+
+class LiveData - formula missing: f(x)=x
+
+
+
+===================================================
+2019-09-06 21:21:05.229239
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 21:27:18.900582
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 21:29:43.858924
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 21:32:09.272818
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 22:19:19.900316
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 23:00:24.295337
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 23:01:23.538540
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 23:01:47.883860
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 23:21:19.712184
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 23:39:10.997795
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 23:40:37.248530
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-06 23:41:37.489524
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-07 13:22:33.623377
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-07 13:34:51.367813
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-24 14:10:52.104140
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-24 14:16:15.554966
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-24 14:43:49.081233
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-24 14:44:10.515071
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-24 14:44:27.146923
+
+class LiveData - formula missing: f(x)=PieceWiseLinear(x)
+
+
+
+===================================================
+2019-09-25 11:01:59.862368
+
+class LiveData - formula missing: 
+
+
+
+===================================================
+2019-09-25 11:07:09.803887
+
+class LiveData - formula missing: 
+
+
+
+===================================================
+2019-09-26 09:52:22.721107
+
+class LiveData - formula missing: 
+
+class LiveData - formula missing: 
+
+class LiveData - formula missing: 
+
+
+
+===================================================
+2019-09-27 09:30:36.305867
+
+class LiveData - formula missing: 
+
+class LiveData - formula missing: 
+
+class LiveData - formula missing: 
+
+
+
+===================================================
+2019-09-27 09:38:23.537362
+
+class LiveData - formula missing: 
+
+class LiveData - formula missing: 
+
+class LiveData - formula missing: 

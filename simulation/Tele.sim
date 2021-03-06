@@ -1,0 +1,8 @@
+//NOTE: "Ford_Master_ItemID_15837" -- "Brake Pad Check"
+//NOTE: PID: 22 61 C0 --- Value: ON
+//NOTE: 
+INFO_DATABASE = Req>1			00 00 07 xx 08 03 22 61 C0 00 00 00 00 	NONE	0	0
+INFO_DATABASE = Res<1			00 00 07 +08 08 07 62 61 c0 10 00 00 00 	NONE	0	0
+
+
+
